@@ -7,6 +7,7 @@
     margin: 0;
     overflow: hidden;
     mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000 25%, #000 75%, rgba(0, 0, 0, 0) 100%);
+    height: 100%;
 }
 
 .background-spread img {
@@ -15,114 +16,46 @@
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     opacity: 0;
     animation-fill-mode: both;
+
+    animation-duration: 1s;
+    animation-name: fadein;
+    animation-timing-function: ease-in-out, ease-out;
 }
 
 .background-spread img:nth-child(1) {
     right: 70%;
     top: 3%;
-
-    animation-duration: 8s, 4s;
-    animation-name: fadein, translate;
-    animation-timing-function: ease-in-out, ease-out;
 }
 
 .background-spread img:nth-child(2) {
     left: 20%;
     top: 80%;
-
-    animation-duration: 13s, 6s;
-    animation-name: fadein, translate2;
-    animation-timing-function: ease-in-out, ease-out;
-    animation-delay: 2s;
 }
 
 .background-spread img:nth-child(3) {
     left: 60%;
     top: 0%;
-
-    animation-duration: 15s, 7s;
-    animation-name: fadein, translate3;
-    animation-timing-function: ease-in-out, ease-out;
-    animation-delay: 4s;
 }
 
 .background-spread img:nth-child(4) {
     left: 80%;
     top: 60%;
-
-    animation-duration: 17s, 6s;
-    animation-name: fadein, translate4;
-    animation-timing-function: ease-in-out, ease-out;
-    animation-delay: 6s;
 }
 
 .background-spread img:nth-child(5) {
     right: 90%;
     top: 60%;
-
-    animation-duration: 10s, 4s;
-    animation-name: fadein, translate5;
-    animation-timing-function: ease-in-out, ease-out;
-    animation-delay: 8s;
 }
 
 @keyframes fadein {
     from {
         opacity: 0;
+        transform: scale(0);
     }
 
     to {
         opacity: 1;
-    }
-}
-
-@keyframes translate {
-    from {
-        transform: translate(-10%, 0%);
-    }
-
-    to {
-        transform: translate(0%, 0%);
-    }
-}
-
-@keyframes translate2 {
-    from {
-        transform: translate(0%, 10%);
-    }
-
-    to {
-        transform: translate(0%, 0%);
-    }
-}
-
-@keyframes translate3 {
-    from {
-        transform: translate(0%, -20%);
-    }
-
-    to {
-        transform: translate(0%, 0%);
-    }
-}
-
-@keyframes translate4 {
-    from {
-        transform: translate(5%, 5%);
-    }
-
-    to {
-        transform: translate(0%, 0%);
-    }
-}
-
-@keyframes translate5 {
-    from {
-        transform: translate(-5%, 0);
-    }
-
-    to {
-        transform: translate(0%, 0%);
+        transform: scale(1);
     }
 }
 

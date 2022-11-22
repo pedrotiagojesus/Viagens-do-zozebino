@@ -9,6 +9,7 @@
     height: 100%;
     background-color: #000;
 
+    animation-fill-mode: both;
     opacity: 0;
     animation-duration: 0.8s;
     animation-name: fadein;

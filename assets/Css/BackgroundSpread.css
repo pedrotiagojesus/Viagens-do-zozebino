@@ -18,9 +18,10 @@
     opacity: 0;
     animation-fill-mode: both;
 
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-name: fadein;
-    animation-timing-function: ease-in-out, ease-out;
+    animation-timing-function: ease;
+    transition-delay: .4s;
 }
 
 .background-spread img:nth-child(1) {
@@ -51,12 +52,12 @@
 @keyframes fadein {
     from {
         opacity: 0;
-        transform: scale(2);
+        transform: scale(1.2);
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateZ(0) scale(1);
     }
 }
 
